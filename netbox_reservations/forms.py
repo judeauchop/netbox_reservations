@@ -3,7 +3,8 @@ from django import forms
 from tenancy.models import Contact, Tenant
 from extras.models import Tag
 from netbox.forms import NetBoxModelForm, NetBoxModelFilterSetForm
-from utilities.forms import DynamicModelMultipleChoiceField
+#from utilities.forms import DynamicModelMultipleChoiceField  wasn't working in my deployment, the line below fixed it.
+from utilities.forms.fields.dynamic import DynamicModelMultipleChoiceField
 from utilities.forms.fields import CommentField, DynamicModelChoiceField
 from .models import Reservation, Claim, RestrictionChoices, ClaimQuerySet
 
