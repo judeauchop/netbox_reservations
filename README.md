@@ -8,4 +8,6 @@ For detailed instructions, please refer to the [documentation](documentation.md)
 
 ## About this project
 
-This plugin was made by me during my 2022/23 work semester.
+Branched the Baspla netbox_reservations projects to fix a few issues, and try to streamline a few things specifically for our lab enviornment. 
+
+100% credit to Baspla and their amazing work.
