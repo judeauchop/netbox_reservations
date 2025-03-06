@@ -37,8 +37,8 @@ _menu_items = (
         permissions=["netbox_reservations.view_claim"]
     ),
 )
-# Hier ist es wichtig ein Komma nach dem letzten Eintrag zu setzen, sonst ist es kein Iterable mehr
-# und keine Seite wird angezeigt, da das Navigationsmenü fehler wirft.
+# Here it is important to put a comma after the last entry, otherwise it is no longer an iterable
+# and no page is displayed because the navigation menu throws errors.
 _overview_menu_items = (
     PluginMenuItem(
         link='plugins:netbox_reservations:tag_overview_list',
