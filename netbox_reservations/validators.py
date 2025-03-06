@@ -7,11 +7,11 @@ TIME_FORMAT = '%Y-%m-%d %H:%M'
 
 
 class ClaimValidator(CustomValidator):
-    # Beim Erstellen von Claims wird überprüft ob
-    # bei restriction == 'EXCLUSIVE':
-    #   ein anderes Claim mit dem selben Tag existiert.
-    # bei restriction == 'SHARED':
-    #   ein anderes Claim mit dem selben Tag als EXCLUSIVE existiert. Andere mit SHARED sind OK
+    # When creating claims, it is checked whether
+    # if restriction == 'EXCLUSIVE':
+    #   another claim with the same tag exists.
+    # if restriction == 'SHARED':
+    #   another claim with the same tag as EXCLUSIVE exists. Others with SHARED are OK
     def validate(self, instance):
         tqs = TreeQuerySet(model=models.Claim)
         children = tqs.descendants(instance, include_self=True)
